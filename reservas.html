@@ -1,0 +1,72 @@
+<!--formulario-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"content="p&acuteagina de escalada"/>
+    <meta name="keywords" content= "escalar,aprender a escalar,palestra"/>
+    <meta name="distribution" content="global"/>
+    <title>ESCALADA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos_principal.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="javacodigo.js"></script>
+    <style>
+      h2{
+        padding-top: 30px;
+        color:gold;
+        font-size: 30px;
+      }
+    </style>
+
+</head>
+<body><div id="contenedor" class="container">
+
+    <header class="row">
+        <div class="col-md-12">
+            <a href="index.html"><img id="logo" src="imagenes/logo.png" /></a>
+            <h1>SPARTAN <br> Escuela de Escalada</h1>
+        </div>
+        
+      </header>
+      <section>
+        
+        <h2> Reservas</h2>
+      <form action="#" class="was-validated">
+        <div class="form-group">
+          <input type="text" id="nombre" placeholder="Nombre" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <input type="text" id="apellido" placeholder="Apellido" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Email" class="form-control" required>
+        </div>
+         <div class="form-group">
+           <input type="number" id="edad" placeholder="Edad" class="form-control" min="5" max="90" required></div>
+           <div class="form-group">
+             <label for="sesion">Programar sesi&oacuten</label>
+           </div>
+           <div class="form-group">
+            <input type="date" id="calendario"required></div>
+        <div class="form-group">
+          <label for="consultas"> Consultas</label>
+          <textarea class="form-control" id="consultas" rows="3"></textarea>
+          <input type="submit" required>
+        </div>
+          </section>
+  <footer>
+    <div class="row">
+      <div class="col-md-6"><h2>CONT&AacuteCTEME</h2>
+          <p>Calle Libertad 589. Ciudad de C&oacuterdoba</p>
+          <p>spartan.cba@hotmail.com</p>
+          <p>3517654321</p></div>
+      <div class="col-md-6"><img src="imagenes/equipo.png"  class="img-responsive" alt="imagenresponsive"id="equipo"></div>
+  </div>
+  </footer>
+            
+</body>
+</html>

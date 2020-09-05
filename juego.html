@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Juego</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos_principal.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<style type="text/css" >
+	h2{
+		padding-top: 30px;
+	}
+	h3{
+		padding-top: 10px;
+		padding-bottom: 20px;
+	}
+	p{
+		font-size: 25px;
+	}
+	
+	</style>
+</head>
+<body>
+	<div id="contenedor" class="container">
+	<header class="row">
+        <div class="col-md-12">
+            <a href="index.html"><img id="logo" src="imagenes/logo.png" class="img-responsive" alt="imagenresponsive"/></a>
+            <h1>SPARTAN <br> Escuela de Escalada</h1>
+        </div>
+        
+	  </header>
+	  <section>
+	<h2>Bienvenido a Spartan</h2>
+	<h3>Para ganarte una clase gratis vamos a jugar a las adivinanzas.<br>Vas a tener 4 intentos para adivinar la palabra y se te va a habilitar una pista por cada intento fallido</h3>
+	<p>Tu primera Pista es que es una comida</p>
+	</section>
+ <section>
+	 <p>Para iniciar a Jugar, Dinos tu nombre <input type="text" id="nombre"></p>
+	 <button type="button" class="btn btn-secondary" onclick="clase_gratis()">Jugar</button>
+	 <p id="resultado"></p>
+	</section>
+	<script>
+		function clase_gratis(){
+			var respuesta = "zanahoria";
+			var cant_intentos = 4;
+			var acerto = false;
+			var pista_uno = "Es una verdura";
+			var pista_dos = "Se come cruda o cocida";
+			var pista_tres = "De color naranja";
+			var mensaje;
+
+			var nombre=document.getElementById("nombre").value;
+			
+			if(nombre==""){
+				alert("Ingrese su nombre para Jugar");
+			}
+			else{
+				while(cant_intentos>0 && acerto==false){
+					cant_intentos--;
+					mensaje= prompt("ingrese su respuesta");
+					if(mensaje==respuesta){
+						alert("Felicitaciones acertaste codigo de clase 4467");
+						acerto=true;
+					}
+					else{
+						alert("le quedan "+ cant_intentos +" intentos");
+						switch(cant_intentos){
+							case 3:
+								alert("Pista uno");
+								alert(pista_uno);
+							break;
+							case 2:
+								alert("Pista dos")
+								alert(pista_dos);
+							break;
+							case 1:
+								alert("Pista tres")
+								alert(pista_tres);
+							break;
+							
+						}
+					} 
+				}
+				document.getElementById("resultado").innerHTML="La respuesta era: <strong>" + respuesta + "</strong>"
+			}
+		}
+	</script>
+	<footer>
+        <div class="row">
+            <div class="col-md-6"><h2>CONT&AacuteCTEME</h2>
+                <p>Calle Libertad 589. Ciudad de C&oacuterdoba</p>
+                <p>spartan.cba@hotmail.com</p>
+                <p>3517654321</p></div>
+            <div class="col-md-6"><img src="imagenes/equipo.png"  class="img-responsive" alt="imagenresponsive"id="equipo"></div>
+        </div>
+      </footer>
+	</div>
+	</body>
+</html>
